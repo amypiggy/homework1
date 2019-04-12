@@ -23,6 +23,22 @@ params:
 
 > 前述存檔與frontmatter要求缺任何一個則扣1分。
 
+```{r}
+install.packages(c("knitr"),lib="C:/rpackages")
+library(knitr,lib="C:/rpackages")
+```
+
+```{r}
+install.packages(c("lubridate"),lib="C:/rpackages")
+library(lubridate,lib="C:/rpackages")
+```
+
+```{r}
+install.packages(c("stringr"),lib="C:/rpackages")
+library(stringr,lib="C:/rpackages")
+```
+
+
 請先執以下code chunk, 引入所需packages. 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
