@@ -97,6 +97,7 @@ commit_df_fun
 ### 1.4 產生完整data frame
 使用作業3的2.4小題所提及的purrr套件之`map_dfr()`函數，將commitHistory的所有30筆資料轉成與1.2小題df_commit一樣欄位名稱但有30筆資料的data fram答案物件df_allCommits, 最後一行請寫df_allCommits
 ```{r ans104}
+
 df_allCommits
 ```
 
