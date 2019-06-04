@@ -167,7 +167,7 @@ df_validCommits$validCommit
 ### 1.12 取出合格條件子樣本
 取出df_validCommits中commitDate落在星期一到三，小時在12到23間（含起迄）的子樣本，存在data frame class的答案物件df_validCommitsSubsample中，最後一行打df_validCommitsSubsample。
 ```{r ans112}
-df_validCommitsSubsample <- 
+df_validCommits[df_validCommits$validCommit,] -> df_validCommitsSubsample
 df_validCommitsSubsample
 ```
 
@@ -176,8 +176,9 @@ df_validCommitsSubsample
 符合上述條件的日期時間，每個日期只需計算一次——即同一天有多個commit落在上述時間區間條件的只計算一次。在不重覆計算下，請問有多少筆合格的commits，將此integer class值存在答案物件validCounts。(hint: `length()`可從vector角度計算物件有幾個元素，`nrow()`只針對方形資料計算它的列數)
 
 ```{r ans113}
-validCounts
+length(df_validCommitsSubsample) -> validCounts
 
+validCounts
 ```
 
 ### 1.14 不重覆有效commit次數查詢函數
@@ -221,7 +222,6 @@ valid_commit_count <- function(username,reponame,wday,startHour,endHour){
 ```
 最後一行請打valid_commit_count。
 ```{r ans114}
-
 valid_commit_count
 ```
 
