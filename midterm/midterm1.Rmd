@@ -220,6 +220,10 @@ fail
 failRate
 ```
 
+```{r}
+?str_sub()
+```
+
 
 ### 7.2 產生學屆系碼 str_sub
 
