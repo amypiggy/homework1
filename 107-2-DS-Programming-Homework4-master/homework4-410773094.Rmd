@@ -171,7 +171,6 @@ df_validCommits[df_validCommits$validCommit,] -> df_validCommitsSubsample
 df_validCommitsSubsample
 ```
 
-
 ### 1.13 不重覆計算
 符合上述條件的日期時間，每個日期只需計算一次——即同一天有多個commit落在上述時間區間條件的只計算一次。在不重覆計算下，請問有多少筆合格的commits，將此integer class值存在答案物件validCounts。(hint: `length()`可從vector角度計算物件有幾個元素，`nrow()`只針對方形資料計算它的列數)
 
