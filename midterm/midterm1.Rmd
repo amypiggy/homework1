@@ -259,10 +259,16 @@ sampledTranscriptData$學系
 unique(sampledTranscriptData$學號[logiCheck]) -> changeMajorStudent
 changeMajorStudent
 ```
-
+c('學號','學期成績','學分數','學年','學期','必選修類別（必／選／通）','系級','科目名稱','年級','學屆')
 ### 7.5 學期平均成績
 請計算學號"410073409b"在101學年第1學期的平均成績（即該學期每科成績乘每科學分後加總，再除以總學分數），答案存在答案物件studentGPA(為numeric class)。
 ```{r ans75}
+(sampledTranscriptData$學號 == "410073409b" &
+  sampledTranscriptData$學年==101 &
+  sampledTranscriptData$學期==1) -> logiSelect
+  
+sum(sampledTranscriptData$學分數[logiSelect]*
+  sampledTranscriptData$學期成績[logiSelect])/sum(sampledTranscriptData$學分數[logiSelect]) -> studentGPA
 
 studentGPA
 ```
