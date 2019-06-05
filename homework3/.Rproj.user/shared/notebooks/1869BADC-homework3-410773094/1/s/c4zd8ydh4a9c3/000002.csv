@@ -1,0 +1,4 @@
+"0","library(purrr)"
+"0","map_dfr(exhibitionList,dataframe_show_info) -> df_allShows"
+"2","Error in as_mapper(.f, ...) : object 'dataframe_show_info' not found
+"

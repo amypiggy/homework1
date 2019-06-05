@@ -1,0 +1,13 @@
+"0","names(invoiceList) <-"
+"0","  c('訂單時間(以訂單時區顯示)','訂單時區之下單時間')"
+"2","Error in names(invoiceList) <- c(""訂單時間(以訂單時區顯示)"", ""訂單時區之下單時間"") : 
+  object 'invoiceList' not found
+"
+"2","In addition: "
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"

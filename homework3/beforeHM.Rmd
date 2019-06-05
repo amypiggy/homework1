@@ -1,0 +1,161 @@
+---
+title: "beforeHM"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r}
+Mat1 <- matrix(
+  c(1:6), 2,3
+)
+Mat1
+```
+
+```{r}
+class(Mat1)
+typeof(Mat1)
+```
+
+```{r}
+Mat2 <- matrix(
+  c("a","b","c","d"), 2, 2
+)
+Mat2
+```
+
+```{r}
+StuList <- list(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuList 
+```
+
+```{r}
+StuDF <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuDF 
+class(StuDF)
+```
+
+
+
+```{r}
+class(StuDF$姓名)
+
+StuDF$姓名 <- as.character(StuDF$姓名)
+class(StuDF$姓名)
+```
+
+```{r}
+class(StuList)
+as.data.frame(StuList) -> StuDF3
+
+class(StuDF3)
+StuDF3
+as.data.frame(StuList,stringsAsFactors = F) -> StuDF4
+class(StuDF4)
+StuDF4
+```
+
+```{r}
+StuDF2 <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50),
+  stringsAsFactors = FALSE
+  )
+StuDF2 
+class(StuDF2)
+```
+
+```{r}
+class(StuDF)
+typeof(StuDF)
+```
+
+```{r}
+LETTERS # R內設元素值為英文字母群的character vector
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+chosenLETTERS[8]
+matObj1[8]
+```
+
+```{r}
+matObj1
+matObj1[3,2] 
+matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]
+```
+
+```{r}
+StuDF
+StuDF[c("姓名","成績")] 
+StuDF[1:5,c("姓名","成績")] 
+```
+
+```{r}
+StuDF[,c("姓名","成績")]
+```
+
+```{r}
+cbind(matObj1,letters[1:5])
+```
+
+```{r}
+
+StuList
+```
+
+```{r}
+StuDF[4,c("成績")]
+```
+
+```{r}
+Vector1 <- letters[1:6]
+Vector1
+
+names(Vector1)
+```
+
+```{r}
+names(Vector1) <- c('名稱1','名稱2','名稱3','名稱4','名稱5','名稱6')
+names(Vector1)
+```
+
+```{r}
+
+```
+

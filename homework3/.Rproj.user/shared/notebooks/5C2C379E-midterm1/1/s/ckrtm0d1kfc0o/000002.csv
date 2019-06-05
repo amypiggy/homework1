@@ -1,0 +1,13 @@
+"0","randomGrades <- sample(40:80,15,replace = T)"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","randomCredits <- sample(0:3,15,replace=T)"
+"0","data3 <- list("
+"0","  成績=randomGrades,"
+"0","  學分數=randomCredits"
+"0",")"

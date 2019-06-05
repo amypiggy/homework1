@@ -1,0 +1,18 @@
+"0","class(StuDF$姓名)"
+"1","[1]"
+"1"," ""factor"""
+"1","
+"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","StuDF$姓名 <- as.character(StuDF$姓名)"
+"0","class(StuDF$姓名)"
+"1","[1]"
+"1"," ""character"""
+"1","
+"

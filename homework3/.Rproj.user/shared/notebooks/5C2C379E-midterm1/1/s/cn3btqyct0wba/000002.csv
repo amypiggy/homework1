@@ -1,0 +1,11 @@
+"0","sample(99:103,15,replace = T)-> yy"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","sample(1:12,replace=T)-> mm"
+"0","str_c(""民國"",str_pad(yy,3,""left"",""0""),""年"",mm,""月"") -> twDates"
+"0","# twDates"

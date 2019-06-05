@@ -3,8 +3,8 @@ title: "homework3"
 date: "2019-04-19"
 output: html_document
 params:
-  studentID: "410773094"
-  studentName: "呂芝瑩"
+  studentID: "你的學號"
+  studentName: "你的姓名"
 ---
 # 注意事項
 
@@ -48,14 +48,12 @@ finStatement <- read_csv("http://mopsfin.twse.com.tw/opendata/t187ap06_O_ci.csv"
 ### 1.1 營業利益
 變數**營業利益（損失）**是公司本業的利益（若為正值）或損失（若為負值）。請找出有營業損失的公司名稱，存成character class的答案物件loss1Companies。
 ```{r ans11}
-loss1Companies <- as.character("營業利益（損失）" < 0)
-loss1Companies
+# loss1Companies
 ```
 
 ### 1.2 每股盈餘
 請找出每股盈餘為負值的公司名稱，存成character class的答案物件loss2Companies。
 ```{r ans12}
-
 # loss2Companies
 ```
 
@@ -70,14 +68,12 @@ loss1Companies
 的公司名稱，存成character class的答案物件only1LossCompanies。
 
 ```{r ans13}
-
 # only1LossCompanies
 ```
 
 ### 1.4 子樣本
 本題物件為data frame class，使用`[.R,.C]`選出符合上題條件的子樣本，存成data frame class的答案物件subsample。
 ```{r ans14}
-
 # subsample
 ```
 
@@ -97,8 +93,7 @@ str(exhibitionList[[1]])
 
 請使用`length()`檢查exhibitionList裡的活動數目，並把數值存在答案物件numExhibitions。
 ```{r ans21}
-numExhibitions <- length(exhibitionList)
-numExhibitions
+# numExhibitions
 ```
 
 ### 2.2 創建活動data frame
@@ -150,7 +145,6 @@ map_dfr(exhibitionList,dataframe_show_info) -> df_allShows
 來自"全國藝文活動資訊系統"的展覽有幾筆，答案存在numeric class物件totalCount。(hint: 將logical vector裡的TRUE加總)
 
 ```{r ans25}
-totalCount <- as.numeric()
 # totalCount
 ```
 

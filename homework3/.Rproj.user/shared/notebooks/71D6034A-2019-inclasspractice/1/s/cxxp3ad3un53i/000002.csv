@@ -1,0 +1,12 @@
+"0","yyyy<-as.integer(str_extract(twDates,""(?<=(民國))[:digit:]+""))+1911"
+"2","Error in stri_extract_first_regex(string, pattern, opts_regex = opts(pattern)) : 
+  object 'twDates' not found
+"
+"2","In addition: "
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"

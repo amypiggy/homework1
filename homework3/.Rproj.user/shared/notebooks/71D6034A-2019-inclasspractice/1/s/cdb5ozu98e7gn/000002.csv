@@ -1,0 +1,16 @@
+"0","gpa_fun <- function(studentID){"
+"0","  transcriptDataFinal$學號==studentID -> logiChosenStudent"
+"0","  "
+"0","  subSample <- transcriptDataFinal[logiChosenStudent,]"
+"0","  "
+"0","  sum(subSample$學期成績*subSample$學分數)/"
+"0","    sum(subSample$學分數) -> GPA"
+"0","  return(GPA)"
+"0","}"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"

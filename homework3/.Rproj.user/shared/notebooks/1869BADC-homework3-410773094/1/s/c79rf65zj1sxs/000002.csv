@@ -1,0 +1,13 @@
+"0","loss1Companies <- as.character(""營業利益（損失）"" < 0)"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","loss1Companies"
+"1","[1]"
+"1"," ""FALSE"""
+"1","
+"
