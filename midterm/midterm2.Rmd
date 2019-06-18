@@ -27,7 +27,6 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-
 請先執以下code chunk, 引入所需packages.
 ```{r}
 library(lubridate); library(stringr); library(purrr); library(readr);
@@ -51,12 +50,7 @@ library(lubridate); library(stringr); library(purrr); library(readr);
 
 ```{r}
 ## ----ans11---------------------------------------------------------------
-homeworkData <- data.frame(
-  姓名=c("小明","小花","小新"),
-  作業1分數=c(10,9,5),
-  作業2分數=c(10,10,9),
-  stringsAsFactors = FALSE
-)
+
 homeworkData
 ```
 1.2
@@ -73,10 +67,6 @@ input: homeworkData的一筆資料，如homeworkData[1,]代表第一筆資料，
 ```{r}
 ## ----ans12f--------------------------------------------------------------
 
-email_content_fun <- function(){
-  
-  return(email_content_fun)
-}
 email_content_fun
 ```
 
@@ -90,22 +80,8 @@ criticalNumber: 為數字。
 str_smallClosest(chrNumber,criticalNumber)會找出chrNumber字串數字中「小於等於」criticalNumber中的「最大值」且回傳值依然是character，例如：str_smallClosest(c("10","25","11"),12)會回傳字串“11”。本題答案物件是str_smallClosest。(hint: max()會找出數字向量中的最大值)
 ```{r}
 ## ----ans2f---------------------------------------------------------------
-#X
-str_smallClosest <- function(chrNumber,criticalNumber){
-  as.numeric(chrNumber) <= max(criticalNumber) -> maxNum
-  return(as.character(maxNum))
-}
-str_smallClosest(c("10","25","11"),12)
 
-#O
-str_smallClosest <- function(chrNumber,criticalNumber){
-  as.numeric(chrNumber) -> numNumber
-  logiTrue <- numNumber <= criticalNumber
-  max(numNumber[logiTrue]) -> maxNum
-  return(as.character(maxNum))
-}
-
-str_smallClosest(c("10","25","11"),12)
+str_smallClosest
 ```
 
 3 選課準則查詢
@@ -123,12 +99,7 @@ str_smallClosest(c("10","25","11"),12)
 請建立一個list class的答案物件EconCourseSelectionInfo，其中EconCourseSelectionInfo[[“104”]]$url會得到“http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc”; 而“104”若換成其他三個學年任一個，所得到的url訊息也會對應改變。本題答案物件是EconCourseSelectionInfo。
 ```{r}
 ## ----ans31---------------------------------------------------------------
-EconCourseSelectionInfo <- list(
-  "101" = "http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc",
-  "104" = "http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc",
-  "105" = "http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc",
-  "107" = "http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf"
-)
+
 EconCourseSelectionInfo
 ```
 
@@ -203,9 +174,7 @@ sampledTranscriptData裡每個元素底下的值都是一位同學在一門課�
 
 請找出外系轉入經濟系的學生學號，並存成changeMajorStudent答案物件。(由於資料一筆為一科成績，所以學號會重覆出現，要存入答案物件前請用unique()去除重覆學號)
 ```{r}
-
 ## ----ans5----------------------------------------------------------------
 
 changeMajorStudent
 ```
-
