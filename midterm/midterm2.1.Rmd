@@ -72,11 +72,9 @@ input: homeworkData的一筆資料，如homeworkData[1,]代表第一筆資料，
 它會回傳為該筆資料量身訂做的emailText，其內容為emailText但將其student，y1及y2分別換成input該筆資料的姓名，作業1成績及作業2成績。
 ```{r}
 ## ----ans12f--------------------------------------------------------------
-email_content_fun <- function(homeworkData[1,],homeworkData[2,],homeworkData[3,]){
-
-函數程序內容
-
-return(output)
+email_content_fun <- function(homeworkData){
+  
+  return(email_content_fun)
 }
 email_content_fun
 ```
