@@ -209,22 +209,26 @@ EconCourseSelectionInfo2
 
 4 differen time zone
 執行以下程式引入invoiceList物件，其中「訂單時區」與「訂單時間(以訂單時區顯示)」的每筆資料是訂單來自時區及以該時區輸入的下單時間字串，「UTC時間」則是個目前無特別意義的UTC時間。
-
+```{r}
 load(url("https://github.com/tpemartin/github-data/blob/master/invoiceList.Rda?raw=true"))
 c('訂單時區','訂單時間(以訂單時區顯示)','UTC時間') -> names(invoiceList)
+```
+
+
 請將每個「訂單時區之下單時間」依其「訂單時區」轉成UTC時間date time class（即POSIXct class）後，存在「UTC時間」對應的位置裡。最後一行請打本題答案物件invoiceList。
 ```{r}
 ## ----ans4----------------------------------------------------------------
-
+ymd
 invoiceList
 ```
 
 5 轉系生
 請先執行以下程式取得學生成績單資料sampledTranscriptData，它是個list class的物件。
-
+```{r}
 load(url("https://github.com/tpemartin/github-data/blob/master/sampledTranscriptData.Rda?raw=true"))
 c('學號','學期成績','學分數','學年','學期','必選修類別（必／選／通）','系級','科目名稱','年級','學屆') ->
   names(sampledTranscriptData)
+```
 sampledTranscriptData裡每個元素底下的值都是一位同學在一門課的修課狀況，資料變數（即這裡元素名稱）。
 
 學號是一入學就決定，不管後來有沒有轉系，其中：
