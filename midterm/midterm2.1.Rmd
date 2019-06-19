@@ -73,11 +73,13 @@ input: homeworkData的一筆資料，如homeworkData[1,]代表第一筆資料，
 ```{r}
 ## ----ans12f--------------------------------------------------------------
 
-email_content_fun <- function(){
-  
-  return(email_content_fun)
+email_content_fun <- function(df){
+  str_replace_all(emailText, c("student"=df$姓名,"y1"=df$作業1分數,"y2"=df$作業2分數)) -> emailout
+  return(emailout)
 }
 email_content_fun
+
+email_content_fun(homeworkData[1,])
 ```
 
 2 字串數字比較
@@ -124,11 +126,20 @@ str_smallClosest(c("10","25","11"),12)
 ```{r}
 ## ----ans31---------------------------------------------------------------
 EconCourseSelectionInfo <- list(
-  "101" = "http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc",
-  "104" = "http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc",
-  "105" = "http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc",
-  "107" = "http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf"
-)
+    "101"=list(
+      url="http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc"
+    ),
+    "104"=list(
+      url="http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc"
+    ),
+    "105"=list(
+      url="http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc"
+    ),
+    "107"=list(
+      url="http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf"
+    )
+  )
+EconCourseSelectionInfo[["104"]]$url
 EconCourseSelectionInfo
 ```
 
@@ -144,8 +155,20 @@ EconCourseSelectionInfo: list class, 代表經濟系的課程資訊，且依前�
 此函數會去EconCourseSelectionInfo中找到對應的url之後return output給使用者。若沒有對應答案，則回傳“很抱歉沒有您入學年的資訊，請打系辦電話”。
 ```{r}
 ## ----ans32f--------------------------------------------------------------
-
-search_courseRules
+search_courseRules <- function(entranceYear,EconCourseSelectionInfo){
+  input <- as.integer(entranceYear)
+  if(input>=101 & input<104){
+    output <- EconCourseSelectionInfo[["101"]]$url
+  } else if(input==104){
+    output <- EconCourseSelectionInfo[["104"]]$url
+  } else if(input>=105 & input<107){
+    output <- EconCourseSelectionInfo[["105"]]$url
+  } else if(input>=107){
+    output <- EconCourseSelectionInfo[["107"]]$url
+  } else {output <- "很抱歉沒有您入學年的資訊，請打系辦電話"
+  } 
+}
+search_courseRules(104,EconCourseSelectionInfo)
 ```
 
 3.3 跨系通用
@@ -172,7 +195,15 @@ search_courseRules_flexible
 此題「禁用」list()重新定義全新list物件，此題改題程式會拿掉答案中出現list字眼的程序行。此題答案物件為EconCourseSelectionInfo2。
 ```{r}
 ## ----ans34---------------------------------------------------------------
+EconCourseSelectionInfo2 <- EconCourseSelectionInfo
+names(EconCourseSelectionInfo2)[[3]] <- "106"
+EconCourseSelectionInfo2$`107`$`線上志願選課辦法` <- 
+  "http://www.econ.ntpu.edu.tw/econ/files/Way/20180712122237.pdf"
+EconCourseSelectionInfo2
 
+EconCourseSelectionInfo2 <- EconCourseSelectionInfo
+names(EconCourseSelectionInfo2)[[3]] <- "106"
+EconCourseSelectionInfo2[["107"]]$"線上志願選課辦法" <-  "http://www.econ.ntpu.edu.tw/econ/files/Way/20180712122237.pdf"
 EconCourseSelectionInfo2
 ```
 
