@@ -229,6 +229,37 @@ invoiceList$UTC時間[logiA] <- Atime
 invoiceList
 ```
 
+```{r}
+#Tanswer
+(invoiceList$訂單時區=="America/New_York") -> nyLogical
+(invoiceList$訂單時區=="Asia/Taipei") -> tpLogical
+
+invoiceList$UTC時間[nyLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[nyLogical],
+          tz="America/New_York"),tzone="UTC")
+invoiceList$UTC時間[tpLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[tpLogical],
+          tz="Asia/Taipei"),tzone="UTC")
+
+invoiceList 
+```
+
+```{r}
+#上次
+(invoiceList$訂單時區=="America/New_York") -> nyLogical
+(invoiceList$訂單時區=="Asia/Taipei") -> tpLogical
+
+invoiceList$UTC時間[nyLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時區之下單時間`[nyLogical],
+          tz="America/New_York"),tzone="UTC")
+invoiceList$UTC時間[tpLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時區之下單時間`[tpLogical],
+          tz="Asia/Taipei"),tzone="UTC")
+
+invoiceList 
+```
+
+
 5 轉系生
 請先執行以下程式取得學生成績單資料sampledTranscriptData，它是個list class的物件。
 ```{r}
